@@ -1,0 +1,44 @@
+			AvaliaÃ§Ã£o de Fundamentos da ProgramaÃ§Ã£o 2
+
+Nome: Anderson Maia Santos												data: 25/04/2023
+
+1) Sobre funções em JavaScript serem cidadãs de primeira classe, marque V ou F:
+
+( F ) funções não podem ser atribuídas a variáveis. 
+( F ) funções não podem ser passadas como argumentos para outras funções.
+( F ) funções não podem ser retornadas como valores de outras funções.
+( F ) Uma função não pode ser definida dentro de outra função em JavaScript. 
+( F ) Funções podem não ser armazenadas em objetos em JavaScript.
+( F ) Funções em JavaScript não podem ser anônimas. 
+( F ) Não é possível criar uma função recursiva em Javascript.
+
+2) Para cada item acima que você marcou falso, elabore um programa em Javascript que demonstre sua decisão:
+
+a) Crie uma variável e atribua a ela uma função em JavaScript.
+b) Crie uma função que recebe outra função como argumento e chame essa função dentro da função principal.
+c) Crie uma função que retorna outra função e armazene o resultado em uma variável. Em seguida, chame a função retornada.
+d) Defina uma função dentro de outra função e verifique se o código ao executado corretamente.
+e) Crie um objeto em JavaScript que contenha uma função como propriedade.
+f) Defina uma função anônima em JavaScript e verifique se ela é executada corretamente.
+g) Crie uma função recursiva em javascript que calcula a soma dos números de 1 até n:.
+
+3) Sobre objetos e funções construtoras, responda as seguintes questões:
+
+a) Crie um objeto literal em JavaScript que represente um carro com as propriedades:
+    "marca", 
+    "modelo",
+    "ano" e 
+    "cor". 
+   Em seguida, adicione uma função chamada "idade" que imprime no console a mensagem "Este carro tem X anos de uso", onde X é calculado para cada objeto.
+
+b) Crie uma função construtora em JavaScript que represente um livro com as propriedades:
+	"tí­tulo", 
+	"autor" e 
+	"ano". 
+   Em seguida, adicione um método chamado "informacoes" que retorna uma string com todas as propriedades do livro. Crie dois objetos usando a função construtora e chame o método "informacoes" para cada um deles.
+
+c) Crie um objeto literal em JavaScript que represente um animal com as propriedades "nome" e "especie". Em seguida, crie um segundo objeto literal que represente um cachorro, que herda as propriedades do objeto animal e adiciona a propriedade "raca". Por fim, crie dois objetos usando o objeto literal de cachorro (sugestão: use a função Object.create() para tal)
+
+
+
+

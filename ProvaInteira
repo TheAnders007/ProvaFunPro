@@ -1,4 +1,4 @@
-			AvaliaÃ§Ã£o de Fundamentos da ProgramaÃ§Ã£o 2
+			Avaliação de Fundamentos da Programação 2
 
 Nome: Anderson Maia Santos												data: 25/04/2023
 
@@ -34,13 +34,15 @@ frase(fmni, name);
 
 c) Crie uma função que retorna outra função e armazene o resultado em uma variável. Em seguida, chame a função retornada.
 
+
 let x;
 function superior () {
-    return function inferior() {
-        x = console.log("A função retorna outra função.");
+    return x = function() {
+        console.log("A função retorna outra função.");
     }
 }
 superior()();
+x();
 
 d) Defina uma função dentro de outra função e verifique se o código ao executado corretamente.
 

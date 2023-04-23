@@ -15,12 +15,72 @@ Nome: Anderson Maia Santos												data: 25/04/2023
 2) Para cada item acima que você marcou falso, elabore um programa em Javascript que demonstre sua decisão:
 
 a) Crie uma variável e atribua a ela uma função em JavaScript.
+
+let def = function(){
+    console.log("Função pode ser atribuída a uma variável.");
+}
+def();
+
 b) Crie uma função que recebe outra função como argumento e chame essa função dentro da função principal.
+
+function fmni() {
+    return "My name is";
+}
+function frase(mni, nome){
+    console.log(mni(), nome + ".");
+}
+name = prompt("Digite seu nome\n");
+frase(fmni, name);
+
 c) Crie uma função que retorna outra função e armazene o resultado em uma variável. Em seguida, chame a função retornada.
+
+
 d) Defina uma função dentro de outra função e verifique se o código ao executado corretamente.
+
+function hipotenusa (a, b){
+    function elev2 (x){
+        return x * x;
+    }
+    return Math.sqrt(elev2(a) + elev2(b));
+}
+c1 = parseInt(prompt("Digite o valor do primeiro cateto: "));
+c2 = parseInt(prompt("Digite o valor do segundo cateto: "))
+console.log("A hipotenusa com os catetos valendo", c1, "e", c2, "vale", hipotenusa(c1, c2), ".");
+
 e) Crie um objeto em JavaScript que contenha uma função como propriedade.
+
+let Brasil = {
+     Nordeste: 56.1,
+     Sudeste: 85.1,
+     Centro_Oeste: 15.2,
+     Sul: 29,
+     Norte: 17.3,
+     Total(){
+       console.log("Total: " + (this.Nordeste + this.Sudeste + this.Centro_Oeste + this.Sul + this.Norte) + " milhões de habitantes.");
+     }
+  }
+
+for (x in Brasil){
+  if (x != "Total"){
+      Brasil[x] = parseInt(prompt("Digite a quantidade de habitantes da região " + x + ": "));
+    }
+}
+
+Brasil.Total();
+
 f) Defina uma função anônima em JavaScript e verifique se ela é executada corretamente.
+
+let cubo = function(num) {console.log ("O valor de", num, "ao cubo é", num * num * num + ".")};
+cubo(3);
+
 g) Crie uma função recursiva em javascript que calcula a soma dos números de 1 até n:.
+
+function somaInterv(n){
+  if(n==1) return 1;
+  return n + somaInterv(n-1);
+}
+let num = parseInt(prompt("Digite um número: "));
+console.log(somaInterv(num));
 
 3) Sobre objetos e funções construtoras, responda as seguintes questões:
 
@@ -31,13 +91,69 @@ a) Crie um objeto literal em JavaScript que represente um carro com as proprieda
     "cor". 
    Em seguida, adicione uma função chamada "idade" que imprime no console a mensagem "Este carro tem X anos de uso", onde X é calculado para cada objeto.
 
+const carro = {
+	marca: "Chevrolet",
+	modelo: "Onix",
+	ano: 2013,
+	cor: "cinza",
+	idade() {
+		let data;
+		let X = 2023 - carro.ano; 
+		console.log("Esse carro tem " + X + " anos de uso.");
+	}
+}
+
+carro.idade();
+
+
+
 b) Crie uma função construtora em JavaScript que represente um livro com as propriedades:
 	"tí­tulo", 
 	"autor" e 
 	"ano". 
-   Em seguida, adicione um método chamado "informacoes" que retorna uma string com todas as propriedades do livro. Crie dois objetos usando a função construtora e chame o método "informacoes" para cada um deles.
+Em seguida, adicione um método chamado "informacoes" que retorna uma string com todas as propriedades do livro. Crie dois objetos usando a função construtora e chame o método "informacoes" para cada um deles.
+
+function Livro(titulo, autor, ano){
+	this.titulo = titulo;
+	this.autor = autor;
+	this.ano = ano;
+	this.informacoes = function() {
+		console.log("Título: " + this.titulo + ", Autor: " + this.autor + ", Ano: " + this.ano + ".");
+	}
+}
+
+const livro1 = new Livro("Senhora", "José de Alencar", 1875);
+
+livro1.informacoes();
+
+const livro2 = new Livro("Os Servos da Morte", "Adonias Filho", 1946);
+
+livro2.informacoes();
+
 
 c) Crie um objeto literal em JavaScript que represente um animal com as propriedades "nome" e "especie". Em seguida, crie um segundo objeto literal que represente um cachorro, que herda as propriedades do objeto animal e adiciona a propriedade "raca". Por fim, crie dois objetos usando o objeto literal de cachorro (sugestão: use a função Object.create() para tal)
+
+let animal = {
+	nome: "Dogui",
+	especie: "Canis lupus"
+}
+
+let cachorro = {raca: "Chihuahua",__proto__:animal}
+
+console.log(cachorro.nome);
+console.log(cachorro.especie);
+console.log(cachorro.raca);
+
+
+let puppy1 = Object.create(cachorro);
+console.log(puppy1.nome);
+console.log(puppy1.especie);
+console.log(puppy1.raca);
+
+let puppy2 = Object.create(cachorro);
+console.log(puppy2.nome);
+console.log(puppy2.especie);
+console.log(puppy2.raca);
 
 
 

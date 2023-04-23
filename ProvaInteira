@@ -34,6 +34,13 @@ frase(fmni, name);
 
 c) Crie uma função que retorna outra função e armazene o resultado em uma variável. Em seguida, chame a função retornada.
 
+let x;
+function superior () {
+    return function inferior() {
+        x = console.log("A função retorna outra função.");
+    }
+}
+superior()();
 
 d) Defina uma função dentro de outra função e verifique se o código ao executado corretamente.
 
@@ -60,17 +67,19 @@ let Brasil = {
      }
   }
 
-for (x in Brasil){
+/*for (x in Brasil){
   if (x != "Total"){
       Brasil[x] = parseInt(prompt("Digite a quantidade de habitantes da região " + x + ": "));
     }
-}
+}*/
 
 Brasil.Total();
 
 f) Defina uma função anônima em JavaScript e verifique se ela é executada corretamente.
 
-let cubo = function(num) {console.log ("O valor de", num, "ao cubo é", num * num * num + ".")};
+let cubo = function(num) {
+    console.log ("O valor de", num, "ao cubo é", num * num * num + ".")
+};
 cubo(3);
 
 g) Crie uma função recursiva em javascript que calcula a soma dos números de 1 até n:.

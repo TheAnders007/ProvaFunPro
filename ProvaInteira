@@ -34,15 +34,12 @@ frase(fmni, name);
 
 c) Crie uma função que retorna outra função e armazene o resultado em uma variável. Em seguida, chame a função retornada.
 
-
-let x;
-function superior () {
-    return x = function() {
-        console.log("A função retorna outra função.");
+let x = function(){
+    return function(){
+        console.log("Função retorna outra função.");
     }
 }
-superior()();
-x();
+x()();
 
 d) Defina uma função dentro de outra função e verifique se o código ao executado corretamente.
 
